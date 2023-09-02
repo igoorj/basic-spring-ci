@@ -10,7 +10,7 @@ public class ProjetoBaseApplication {
 		SpringApplication.run(ProjetoBaseApplication.class, args);
 		System.out.println(calcular(15, 15));
 		System.out.println(multiplicar(15, 15));
-		System.out.println("Hello world. Its my first pipeline CI");
+		System.out.println("Hello world. Its my first pipeline CI!!!");
 	}
 
 	private static int calcular(int a, int b) {
