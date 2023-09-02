@@ -1,0 +1,27 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v2
+
+      - name: Configurar JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+
+      - name: Build com Maven
+        run: mvn clean package
+
+      - name: Implantação
+        uses: easingthemes/deploy-to-gh-pages@v3
+        with:
+          branch: main
+          folder: ./target
