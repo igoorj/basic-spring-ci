@@ -32,4 +32,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: false
-        tags: igoorj/projeto-base:latest
+        tags: igoorj/basic-spring-ci:latest
